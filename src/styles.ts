@@ -39,7 +39,7 @@ export const CardContainer = styled.div`
   box-shadow: #091e4240 0px 1px 0px 0px;
 `;
 
-export const AddItemButton = styled.div<AddItemButtonProps>`
+export const AddItemButton = styled.button<AddItemButtonProps>`
   background-color: #ffffff3d;
   border-radius: 3px;
   border: none;
@@ -63,7 +63,7 @@ export const NewItemFormContainer = styled.div`
   align-items: flex-start;
 `;
 
-export const NewItemButton = styled.div`
+export const NewItemButton = styled.button`
   background-color: #5aac44;
   border-radius: 3px;
   border: none;
@@ -73,7 +73,7 @@ export const NewItemButton = styled.div`
   text-align: center;
 `;
 
-export const NewItemInput = styled.div`
+export const NewItemInput = styled.input`
   border-radius: 3px;
   border: none;
   box-shadow: #091e4240 0px 1px 0px 0px;
