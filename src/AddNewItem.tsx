@@ -1,6 +1,6 @@
 import React from "react";
 import { AddItemButton } from "./styles";
-import NewItemForm from "./NewItemForm";
+import { NewItemForm } from "./NewItemForm";
 
 interface AddNewItemProps {
   onAdd(text: string): void;
@@ -8,7 +8,7 @@ interface AddNewItemProps {
   dark?: boolean;
 }
 
-const AddNewItem: React.FC<AddNewItemProps> = ({
+export const AddNewItem: React.FC<AddNewItemProps> = ({
   onAdd,
   dark,
   toggleButtonText,
@@ -32,5 +32,3 @@ const AddNewItem: React.FC<AddNewItemProps> = ({
     </AddItemButton>
   );
 };
-
-export default AddNewItem;
