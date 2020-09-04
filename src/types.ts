@@ -9,6 +9,6 @@ interface List {
   tasks: Task[];
 }
 
-export interface AppState {
+export interface AppStateType {
   lists: List[];
 }

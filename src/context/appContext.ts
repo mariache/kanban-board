@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { AppStateProps } from "./AppState";
+import { AppStateProps } from "./AppStateProvider";
 
 const appContext = createContext<AppStateProps>({} as AppStateProps);
 
