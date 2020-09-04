@@ -1,8 +1,8 @@
 import React from "react";
-import { AppContainer } from "./styles";
-import { Column } from "./Column";
-import { Card } from "./Card";
-import { AddNewItem } from "./AddNewItem";
+import { AppContainer } from "./components/styles";
+import { Column } from "./components/Column";
+import { Card } from "./components/Card";
+import { AddNewItem } from "./components/AddNewItem";
 
 function App() {
   return (
