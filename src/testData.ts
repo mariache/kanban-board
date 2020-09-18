@@ -13,11 +13,6 @@ export const appData: AppStateType = {
       tasks: [{ id: "c2", text: "Learn TS" }],
     },
     {
-      id: "3",
-      text: "In Progress",
-      tasks: [{ id: "c4", text: "Learn State Management" }],
-    },
-    {
       id: "2",
       text: "Done",
       tasks: [{ id: "c3", text: "Begin to use static typing" }],
