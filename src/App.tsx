@@ -2,7 +2,7 @@ import React from "react";
 import { AppContainer } from "./components/styles";
 import { Column } from "./components/Column";
 import { AddNewItem } from "./components/AddNewItem";
-import { useAppState } from "./context/AppStateProvider";
+import { useAppState } from "./context/AppStateContext";
 
 const App = () => {
   const { state } = useAppState();
