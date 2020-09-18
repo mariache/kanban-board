@@ -1,7 +1,7 @@
 import React from "react";
 import { ColumnContainer, ColumnTitle } from "./styles";
 import { AddNewItem } from "./AddNewItem";
-import { useAppState } from "../context/AppStateProvider";
+import { useAppState } from "../context/AppStateContext";
 import { Card } from "./Card";
 
 interface ColomnProps {
