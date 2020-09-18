@@ -4,15 +4,15 @@ import { AddNewItem } from "./AddNewItem";
 import { useAppState } from "../context/AppStateContext";
 import { Card } from "./Card";
 
-interface ColomnProps {
+interface ColumnProps {
   text: string;
   index: number;
 }
 
-export const Column: React.FC<ColomnProps> = ({
+export const Column: React.FC<ColumnProps> = ({
   text,
   index,
-}: React.PropsWithChildren<ColomnProps>) => {
+}: React.PropsWithChildren<ColumnProps>) => {
   const { state } = useAppState();
 
   return (
