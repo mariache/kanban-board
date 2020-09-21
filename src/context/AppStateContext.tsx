@@ -1,10 +1,12 @@
-import { AppStateType } from "../types";
+import { AppState } from "../types";
 import React, { useContext, useReducer, createContext } from "react";
 import { ADD_LIST, ADD_TASK } from "./constants";
+import { nanoid } from "nanoid";
 import { appData } from "../testData";
+import { findItemIndexById } from "../utils/findItemIndexById";
 
 export interface AppStateContextProps {
-  state: AppStateType;
+  state: AppState;
   dispatch: React.Dispatch<any>;
 }
 
@@ -18,15 +20,30 @@ type Action =
       payload: { text: string; taskId: string };
     };
 
-const appStateReducer = (state: AppStateType, action: Action): AppStateType => {
+const appStateReducer = (state: AppState, action: Action): AppState => {
   switch (action.type) {
     case ADD_LIST: {
-      const visibilityExample = "Too visible";
-      return { ...state };
+      return {
+        ...state,
+        lists: [
+          ...state.lists,
+          { id: nanoid(), text: action.payload, tasks: [] },
+        ],
+      };
     }
     case ADD_TASK: {
-      const visibilityExample = "Too visible";
-      return { ...state };
+      const targetLaneIndex = findItemIndexById(
+        state.lists,
+        action.payload.taskId
+      );
+      state.lists[targetLaneIndex].tasks.push({
+        id: nanoid(),
+        text: action.payload.text,
+      });
+
+      return {
+        ...state,
+      };
     }
     default: {
       return state;
