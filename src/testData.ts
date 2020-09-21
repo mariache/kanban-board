@@ -1,6 +1,6 @@
-import { AppStateType } from "./types";
+import { AppState } from "./types";
 
-export const appData: AppStateType = {
+export const appData: AppState = {
   lists: [
     {
       id: "0",
@@ -10,12 +10,12 @@ export const appData: AppStateType = {
     {
       id: "1",
       text: "In Progress",
-      tasks: [{ id: "c2", text: "Learn TS" }],
+      tasks: [{ id: "c1", text: "Learn TS" }],
     },
     {
       id: "2",
       text: "Done",
-      tasks: [{ id: "c3", text: "Begin to use static typing" }],
+      tasks: [{ id: "c2", text: "Begin to use static typing" }],
     },
   ],
 };

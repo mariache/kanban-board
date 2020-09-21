@@ -1,4 +1,4 @@
-import { AppStateType } from "../types";
+import { AppState } from "../types";
 import React, { useContext, useReducer, createContext } from "react";
 import { ADD_LIST, ADD_TASK } from "./constants";
 import { nanoid } from "nanoid";
@@ -6,7 +6,7 @@ import { appData } from "../testData";
 import { findItemIndexById } from "../utils/findItemIndexById";
 
 export interface AppStateContextProps {
-  state: AppStateType;
+  state: AppState;
   dispatch: React.Dispatch<any>;
 }
 
@@ -20,7 +20,7 @@ type Action =
       payload: { text: string; taskId: string };
     };
 
-const appStateReducer = (state: AppStateType, action: Action): AppStateType => {
+const appStateReducer = (state: AppState, action: Action): AppState => {
   switch (action.type) {
     case ADD_LIST: {
       return {
