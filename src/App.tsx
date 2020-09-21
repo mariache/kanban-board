@@ -3,16 +3,20 @@ import { AppContainer } from "./components/styles";
 import { Column } from "./components/Column";
 import { AddNewItem } from "./components/AddNewItem";
 import { useAppState } from "./context/AppStateContext";
+import { ADD_LIST } from "./context/constants";
 
 const App = () => {
-  const { state } = useAppState();
+  const { state, dispatch } = useAppState();
 
   return (
     <AppContainer>
       {state.lists.map((list, idx) => (
-        <Column text={list.text} key={list.id} index={idx} />
+        <Column id={list.id} text={list.text} key={list.id} index={idx} />
       ))}
-      <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log} />
+      <AddNewItem
+        toggleButtonText="+ Add another list"
+        onAdd={(text) => dispatch({ type: ADD_LIST, payload: text })}
+      />
     </AppContainer>
   );
 };
