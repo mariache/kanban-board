@@ -4,6 +4,7 @@ import { ADD_LIST, ADD_TASK, MOVE_LIST } from "./constants";
 import { nanoid } from "nanoid";
 import { appData } from "../testData";
 import { findItemIndexById } from "../utils/findItemIndexById";
+import { moveItem } from "../movieItem";
 
 export interface AppStateContextProps {
   state: AppState;
